@@ -50,8 +50,6 @@ rm -rf %{buildroot}
 
 
 %files
-%license %{name}-%{version}/src/github.com/%{gh_user}/%{name}/LICENSE
-%doc %{name}-%{version}/src/github.com/%{gh_user}/%{name}/{BUILDING.md,CHANGELOG.md,README.md}
 %{_bindir}/%{name}
 
 
