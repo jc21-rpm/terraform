@@ -3,7 +3,7 @@
 %global gh_user hashicorp
 
 Name:           terraform
-Version:        0.11.13
+Version:        0.11.14
 Release:        1
 Summary:        Write, Plan, and Create Infrastructure as Code.
 Group:          Applications/System
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon May 20 2019 Jamie curnow <jc@jc21.com> 0.11.14-1
+- v0.11.14
+
 * Thu Mar 12 2019 Jamie Curnow <jc@jc21.com> 0.11.13-1
 - Initial spec
 
