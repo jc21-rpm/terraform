@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Oct 18 2019 Jamie Curnow <jc@jc21.com> 0.12.11-1
+- v0.12.11
+
 * Tue Oct 8 2019 Jamie Curnow <jc@jc21.com> 0.12.10-1
 - v0.12.10
 
