@@ -3,12 +3,13 @@
 %global gh_user hashicorp
 
 Name:           terraform
-Version:        0.12.18
+Version:        0.12.19
 Release:        1
 Summary:        Write, Plan, and Create Infrastructure as Code.
 Group:          Applications/System
 License:        MPLv2.0
 URL:            https://terraform.io/
+Source:         https://github.com/%{gh_user}/%{name}/archive/v%{version}.tar.gz
 BuildRequires:  golang >= 1.11
 BuildRequires:  make which zip
 
@@ -21,12 +22,10 @@ as code, edited, reviewed, and versioned.
 
 
 %prep
-wget https://github.com/%{gh_user}/%{name}/archive/v%{version}.tar.gz
-tar xzf v%{version}.tar.gz
+%setup -q -n %{name}-%{version}
 
 
 %build
-cd %{name}-%{version}
 export GOPATH=$PWD
 export PATH=${PATH}:${GOPATH}/bin
 export XC_ARCH=amd64
@@ -42,7 +41,7 @@ popd
 
 %install
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
-install -m 0755 %{name}-%{version}/src/github.com/%{gh_user}/%{name}/bin/%{name} $RPM_BUILD_ROOT%{_bindir}
+install -m 0755 src/github.com/%{gh_user}/%{name}/bin/%{name} $RPM_BUILD_ROOT%{_bindir}
 
 
 %clean
@@ -54,6 +53,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Jan 9 2020 Jamie Curnow <jc@jc21.com> 0.12.19-1
+- v0.12.19
+
 * Thu Dec 12 2019 Jamie Curnow <jc@jc21.com> 0.12.18-1
 - v0.12.18
 
