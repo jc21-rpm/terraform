@@ -45,7 +45,7 @@ install -m 0755 src/github.com/%{gh_user}/%{name}/bin/%{name} $RPM_BUILD_ROOT%{_
 
 
 %clean
-rm -rf %{buildroot}
+rm -rf %{buildroot} || echo
 
 
 %files
