@@ -45,7 +45,7 @@ install -m 0755 src/github.com/%{gh_user}/%{name}/bin/%{name} $RPM_BUILD_ROOT%{_
 
 
 %clean
-rm -rf %{buildroot} || echo
+rm -rf %{buildroot}
 
 
 %files
@@ -116,6 +116,6 @@ rm -rf %{buildroot} || echo
 * Mon May 20 2019 Jamie Curnow <jc@jc21.com> 0.11.14-1
 - v0.11.14
 
-* Thu Mar 12 2019 Jamie Curnow <jc@jc21.com> 0.11.13-1
+* Tue Mar 12 2019 Jamie Curnow <jc@jc21.com> 0.11.13-1
 - Initial spec
 
