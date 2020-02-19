@@ -3,7 +3,7 @@
 %global gh_user hashicorp
 
 Name:           terraform
-Version:        0.12.20
+Version:        0.12.21
 Release:        1
 Summary:        Write, Plan, and Create Infrastructure as Code.
 Group:          Applications/System
@@ -49,6 +49,9 @@ install -m 0755 src/github.com/%{gh_user}/%{name}/bin/%{name} $RPM_BUILD_ROOT%{_
 
 
 %changelog
+* Thu Feb 20 2020 Jamie Curnow <jc@jc21.com> 0.12.21-1
+- v0.12.21
+
 * Thu Jan 23 2020 Jamie Curnow <jc@jc21.com> 0.12.20-1
 - v0.12.20
 
