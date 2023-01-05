@@ -31,7 +31,7 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %{_bindir}/%{name}
 
 %changelog
-* Thu Jan 5 2022 Jamie Curnow <jc@jc21.com> 1.3.7-1
+* Thu Jan 5 2023 Jamie Curnow <jc@jc21.com> 1.3.7-1
 - v1.3.7
 
 * Wed Dec 7 2022 Jamie Curnow <jc@jc21.com> 1.3.6-1
