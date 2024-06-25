@@ -3,8 +3,8 @@
 %global gh_user hashicorp
 
 Name:           terraform
-Version:        1.4.5
-Release:        1
+Version:        1.8.5
+Release:        1%{?dist}
 Summary:        Write, Plan, and Create Infrastructure as Code.
 Group:          Applications/System
 License:        MPLv2.0
@@ -31,6 +31,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %{_bindir}/%{name}
 
 %changelog
+* Tue Jun 25 2024 Jamie Curnow <jc@jc21.com> 1.8.5-1
+- v1.8.5
+
 * Tue Jun 6 2023 Jamie Curnow <jc@jc21.com> 1.4.5-1
 - v1.4.5
 
