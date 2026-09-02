@@ -3,7 +3,7 @@
 %global gh_user hashicorp
 
 Name:           terraform
-Version:        1.8.5
+Version:        1.16.1
 Release:        1%{?dist}
 Summary:        Write, Plan, and Create Infrastructure as Code.
 Group:          Applications/System
@@ -31,6 +31,9 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 %{_bindir}/%{name}
 
 %changelog
+* Thu Sep 3 2026 Jamie Curnow <jc@jc21.com> 1.16.1-1
+- v1.16.1
+
 * Tue Jun 25 2024 Jamie Curnow <jc@jc21.com> 1.8.5-1
 - v1.8.5
 
