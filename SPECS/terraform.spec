@@ -22,6 +22,9 @@ as code, edited, reviewed, and versioned.
 %setup -q -n %{name}-%{version}
 
 %build
+# proxy.golang.org first: some module tags (e.g. tencentcloud/sts/v1.0.588) were
+# deleted upstream and only resolve from its cache, not via direct git fetch
+export GOPROXY="https://proxy.golang.org|${GOPROXY:-direct}"
 go build -o %{_builddir}/bin/%{name}
 
 %install
@@ -121,7 +124,7 @@ install -Dm0755 %{_builddir}/bin/%{name} %{buildroot}%{_bindir}/%{name}
 * Sun Dec 6 2020 Jamie Curnow <jc@jc21.com> 0.14.0-1
 - v0.14.0
 
-* Mon Oct 29 2020 Jamie Curnow <jc@jc21.com> 0.13.5-1
+* Thu Oct 29 2020 Jamie Curnow <jc@jc21.com> 0.13.5-1
 - v0.13.5
 
 * Thu Oct 1 2020 Jamie Curnow <jc@jc21.com> 0.13.4-1
